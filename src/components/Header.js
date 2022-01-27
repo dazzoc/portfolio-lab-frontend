@@ -1,19 +1,20 @@
 import { Link } from "react-router-dom";
+import "./Header.scss";
 
 function Header(props) {
     return (
-        <header className="Header">
-            <div className="logo">
-                <h1>My Portfolio Page</h1>
-            </div>
+        <header className="header">
+            <Link to="/" className="logo-link">
+                <h1 className="logo">DAZZO</h1>
+            </Link>
             <nav className="nav-links">
-                <Link to="/">
+                <Link to="/" className="home">
                     <div>HOME</div>
                 </Link>
-                <Link to="/about">
+                <Link to="/about" className="about">
                     <div>ABOUT</div>
                 </Link>
-                <Link to="/projects">
+                <Link to="/projects" className="projects">
                     <div>PROJECTS</div>
                 </Link>
             </nav>

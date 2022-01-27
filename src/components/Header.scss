@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
+
+$black: #000;
+$white: #fff;
+
+.header {
+    display: flex;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: $white;
+
+    .logo-link {
+        flex: 50%;
+        text-decoration: none;
+    }
+    .nav-links {
+        flex: 50%;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-weight: 800;
+    color: $black;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px;
+    font-size: 14px;
+
+    .home {
+        margin-right: 15px;
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+            font-size: 15px;
+        }
+    }
+    .about {
+        margin-right: 15px;
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+            font-size: 15px;
+        }
+    }
+    .projects {
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+            font-size: 15px;
+        }
+    }
+}

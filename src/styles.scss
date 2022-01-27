@@ -1,14 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
 }
 
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    border: 3px solid black;
-    padding: 8px;
-    width: 90%;
-    margin: auto;
+.App {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    'head'
+    'main'
+    'footer';
 }
+
+.header, .container, .footer {
+    flex-shrink: 0;
+}
+
+.header {
+    grid-area: head;
+}
+
+.container {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 9rem 0;
+}
+
+.About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .name{
+        font-size: 30px;
+        font-weight: 800;
+        position: relative;
+        right: 115px;
+        margin: 10px;
+    }
+    .bio {
+        width: 400px;
+    }
+    .email {
+        position: relative;
+        right: 35px;
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+
+.headshot {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.project-img {
+    width: 400px;
+}
+

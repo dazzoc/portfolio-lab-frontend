@@ -2,7 +2,9 @@
 
 function Footer(props) {
     return (
-        <h1>Footer</h1>
+        <footer className="footer">
+            <p>Dazzo 2022 | Wash your hands</p>
+        </footer>
     );
 }
 
