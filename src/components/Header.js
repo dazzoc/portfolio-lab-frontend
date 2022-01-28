@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./Header.scss";
 
 function Header(props) {
+    const [ navbar, setNavShow ] = useState(false);
+    let userScrollY = window.scrollY;
+    const controlNav = () => {
+        if (userScrollY < window.scrollY) {
+            setNavShow(true)
+        } else {
+            setNavShow(false)
+        }
+    };
+
+    window.addEventListener('scroll', controlNav);
+    
     return (
-        <header className="header">
+        <header className={navbar ? 'navbar active' : 'navbar'}>
             <Link to="/" className="logo-link">
                 <h1 className="logo">DAZZO</h1>
             </Link>

@@ -3,13 +3,14 @@
 $black: #000;
 $white: #fff;
 
-.header {
+.navbar {
     display: flex;
     height: 75px;
     position: fixed;
     width: 100%;
     z-index: 10;
     background-color: $white;
+    transition: 0.3s ease-in-out;
 
     .logo-link {
         flex: 50%;
@@ -20,12 +21,20 @@ $white: #fff;
     }
 }
 
+.navbar.active {
+    transform: translateY(-75px);
+}
+
 .logo {
     display: flex;
     align-items: center;
     margin: 20px;
     font-weight: 800;
     color: $black;
+
+    &:hover {
+        transform: scale(1.0, 1.0);
+    }
 }
 
 .nav-links {
@@ -41,7 +50,7 @@ $white: #fff;
         color: $black;
 
         &:hover {
-            font-size: 15px;
+            transform: scale(1.1, 1.1);
         }
     }
     .about {
@@ -50,7 +59,7 @@ $white: #fff;
         color: $black;
 
         &:hover {
-            font-size: 15px;
+            transform: scale(1.1, 1.1);
         }
     }
     .projects {
@@ -58,7 +67,7 @@ $white: #fff;
         color: $black;
 
         &:hover {
-            font-size: 15px;
+            transform: scale(1.1, 1.1);
         }
     }
 }
