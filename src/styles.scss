@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
 
+$black: #000;
+$white: #fff;
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -35,10 +45,7 @@
 }
 
 .About {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-column;
 
     .name{
         font-size: 30px;
@@ -67,7 +74,20 @@
     grid-area: footer;
 }
 
+
+
 .project-img {
     width: 400px;
+}
+
+.btns {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin: 5px;
 }
 
